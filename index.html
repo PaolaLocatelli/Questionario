@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Qual a capital do Paraná?</p>
+    <input type="text" id="pergunta 1" />
+    <p>Qual a capital dos Estados Unidos da América?</p>
+    <input type="text" id="pergunta 2" />
+    <p>Qual é a capital de Santa Catarina </p>
+    <input type="text" id="pergunta 3" /><br/>
+<button id="calcular">Calcular</button>
+    <script>
+let q1=document.getElementById('pergunta1');
+let q2=document.getElementById('pergunta2');
+let q3=document.getElementById('pergunta3');
+let botao=document.getElementById('calcular');
+
+function contabilizarAcertos(){
+    let contador=0;
+
+    if(q1.value=='Curitiba'){
+        contador++;
+    }
+
+    alert(`Você acertou ${contador} questôes`);
+}
+
+botao.addEventListener('click',contabilizarAcertos,false);
+    </script>
+</body>
+</html>
