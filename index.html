@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Questionário</title>
 </head>
 
 <body>
@@ -13,11 +15,18 @@
     <p>Qual a capital dos Estados Unidos da América?</p>
     <input type="text" id="pergunta2" />
     <p>Qual é a capital de Santa Catarina </p>
-    <button id="calcular">Calcular</button>
+    <input type="text"="" id="pergunta3">
+    <p>Qual o ano do descobrimento do Brasil? </p>
+    <input type="number"="" id="pergunta4">
+    <p>Qual foi o dia da Proclamação da República? </p>
+    <input type="text and number"="" id="pergunta5">
+    <button id="calcular" class="btn btn-primary">Calcular</button>
     <script>
         let q1 = document.getElementById('pergunta1');
         let q2 = document.getElementById('pergunta2');
         let q3 = document.getElementById('pergunta3');
+        let q4 = document.getElementById('pergunta4');
+        let q5 = document.getElementById('pergunta5');
         let botao = document.getElementById('calcular');
 
         function contabilizarAcertos() {
@@ -31,6 +40,12 @@
                 contador++;
             }
             if (q3.value == 'Florianópolis') {
+                contador++;
+            }
+            if (q4.value == '1500') {
+                contador++;
+            }
+            if (q5.value == '15 de novembro de 1889') {
                 contador++;
             }
 
