@@ -1,35 +1,44 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <p>Qual a capital do Paraná?</p>
-    <input type="text" id="pergunta 1" />
+    <input type="text" id="pergunta1" />
     <p>Qual a capital dos Estados Unidos da América?</p>
-    <input type="text" id="pergunta 2" />
+    <input type="text" id="pergunta2" />
     <p>Qual é a capital de Santa Catarina </p>
-    <input type="text" id="pergunta 3" /><br/>
-<button id="calcular">Calcular</button>
+    <button id="calcular">Calcular</button>
     <script>
-let q1=document.getElementById('pergunta1');
-let q2=document.getElementById('pergunta2');
-let q3=document.getElementById('pergunta3');
-let botao=document.getElementById('calcular');
+        let q1 = document.getElementById('pergunta1');
+        let q2 = document.getElementById('pergunta2');
+        let q3 = document.getElementById('pergunta3');
+        let botao = document.getElementById('calcular');
 
-function contabilizarAcertos(){
-    let contador=0;
+        function contabilizarAcertos() {
+            console.log('teste');
+            let contador = 0;
 
-    if(q1.value=='Curitiba'){
-        contador++;
-    }
+            if (q1.value == 'Curitiba') {
+                contador++;
+            }
+            if (q2.value == 'Washington, D.C.') {
+                contador++;
+            }
+            if (q3.value == 'Florianópolis') {
+                contador++;
+            }
 
-    alert(`Você acertou ${contador} questôes`);
-}
+            alert(`Você acertou ${contador} questões`);
+        }
 
-botao.addEventListener('click',contabilizarAcertos,false);
+        botao.addEventListener('click', contabilizarAcertos, false);
     </script>
 </body>
+
 </html>
